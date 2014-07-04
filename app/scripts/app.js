@@ -17,12 +17,16 @@ var app = angular.module('angNewsApp', [
     'ngSanitize',
     'ngTouch',
     'firebase'
-]).constant('FIREBASE_URL', 'https://glaring-fire-9829.firebaseio.com/');;
+]).constant('FIREBASE_URL', 'https://glaring-fire-9829.firebaseio.com/');
 
 app.config(function ($routeProvider) {$routeProvider
     .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
+    })
+    .when('/posts/:postId', {
+        templateUrl: 'views/showpost.html',
+        controller: 'PostViewCtrl'
     })
     .otherwise({
         redirectTo: '/'
