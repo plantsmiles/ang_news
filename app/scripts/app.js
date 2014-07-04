@@ -15,8 +15,9 @@ var app = angular.module('angNewsApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-]);
+    'ngTouch',
+    'firebase'
+]).constant('FIREBASE_URL', 'https://glaring-fire-9829.firebaseio.com/');;
 
 app.config(function ($routeProvider) {$routeProvider
     .when('/', {
